@@ -525,15 +525,15 @@ export default function DashboardHeader({ role, namaRs, surveys, selectedYear, a
                   alt="Banner Card Header Dashboard"
                   onError={() => setImageError(true)}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] filter brightness-[1.02] contrast-[1.02]"
-                  style={{
-                    objectPosition: headerImage.position === 'center'
-                      ? 'center center'
-                      : headerImage.position === 'top-right'
-                      ? 'right top'
-                      : headerImage.position === 'bottom-right'
-                      ? 'right bottom'
-                      : 'right center'
-                  }}
+style={{
+          objectPosition: (headerImage.position as string) === 'center'
+            ? 'center center'
+            : headerImage.position === 'top-right'
+            ? 'right top'
+            : headerImage.position === 'bottom-right'
+            ? 'right bottom'
+            : 'right center'
+        }}
                 />
               </div>
 
